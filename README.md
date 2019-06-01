@@ -23,10 +23,10 @@ TONEはQMKファームウェアを利用しており、お客様ご自身で、�
   - 組立工具の確認と購入  
   
 - 2 組み立て手順（buildguide.md）の確認  
-  - 詳細はbuildguide.mdにてご案内します。  
+  - buildguide.mdにてご案内します。  
   
 - 3 ファームウエアの書き込み方法  
-  - 詳細はQMK_firmware.mdにてご案内します。  
+  - TONE_QMK_firmware.mdにてご案内します。  
   
 - 4 組み立てFAQ  
   - TONE_FAQ.mdにてご案内します。  
