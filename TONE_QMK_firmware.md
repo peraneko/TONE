@@ -40,18 +40,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 void encoder_update_user(uint16_t index, bool clockwise) {
-        if (clockwise) {
-            tap_code(KC_0);
-        } else {
-            tap_code(KC_1);
-        }
+  if (clockwise) {
+    tap_code(KC_0);
+  } else {
+    tap_code(KC_1);
+  }
 }
 ~~~
+
 上段の４キーが左からABCD  
 下段の４キーが左からEFGH  
 ロータリーエンコーダ時計回りが0  
-反時計回りが1です。  
-  
+反時計回りが1です。    
+|A|B|C|D|  
+|E|F|G|H|  
+| | |1|0|  
+
+
+
 すべてのキーとロータリーエンコーダが正常に動いていることを確認したら、マクロパッドとしてのキーマップを書き込みましょう。
 このキーマップは、Adobe photoshop Lightroom Classicでデモンストレーションを行うように設計されています。
 
@@ -65,14 +71,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 void encoder_update_user(uint16_t index, bool clockwise) {
-   if (clockwise) {
-     tap_code(KC_UP);
-   } else {
-      tap_code(KC_DOWN);
-   }
+  if (clockwise) {
+    tap_code(KC_UP);
+  } else {
+    tap_code(KC_DOWN);
+  }
 }
 ~~~
 [TONE_ALR.hex](https://github.com/peraneko/TONE/blob/master/TONE_HEX/TONE_ALR.hex)  
 TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、先程の手順でProMicroに書き込んでみましょう。
-
-
+  
+上段の４キーが左からCtrl+SHIFTT+E（書き出し）　SHIFT+TAB　TAB　0    
+下段の４キーが左からSHIFT　CTRL+←（前の画像）　CTRL＋→（次の画像） CTRL+Z  
+ロータリーエンコーダ時計回りが↑
+反時計回りが↓です。
+  
