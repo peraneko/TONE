@@ -26,10 +26,11 @@ QMK Toolboxを無事にダウンロードしたら、インストールして実
 local fileの右側にあるOPENをクリックして、先程ダウンロードしておいた、TONE_test.hexを選択してください。  
   
 選択したら、TONEのリセットスイッチを押します。
-すると、自動的に書き込みが進んでいきます。すべて書き込まれると、PeranekoFactory:tone connectedと表示されます。
+すると、自動的に書き込みが進んでいきます。  
+書き込みが終わるとavrdude.exe done.  Thank you.と表示されます。
   
 ~~~C
-    [0] = LAYOUT( 
+  [0] = LAYOUT( 
     KC_A,  KC_B,  KC_C, KC_B,\
     KC_E,  KC_F,  KC_G, KC_H,\
     KC_0, KC_1 \
