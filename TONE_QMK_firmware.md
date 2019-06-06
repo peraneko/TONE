@@ -52,9 +52,10 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 下段の４キーが左からEFGH  
 ロータリーエンコーダ時計回りが0  
 反時計回りが1です。    
-|A|B|C|D|  
-|E|F|G|H|  
-| | |1|0|  
+  
+|A|B|C|D|
+|E|F|G|H|
+| | |1|0|
 
 
 
