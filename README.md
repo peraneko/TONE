@@ -101,8 +101,8 @@ https://www.amazon.co.jp/dp/B001D7TE2E
 ### USB TypeAオス to MicroUSBオスケーブル
 充電専用ケーブルでは接続できないのでご注意ください。   
 こちらはAmazonで販売されている商品の例です。   
+https://www.amazon.co.jp/dp/B0711PVX6Z/  
 Androidスマホを使っている／使っていた方はそのケーブルが使えると思います。  
-また、遊舎工房さんの店頭でも買えます。
-https://www.amazon.co.jp/dp/B0711PVX6Z/
+また、遊舎工房さんの店頭でも買えます。  
   
 必要な部品と道具が揃ったら、組み立てに進みましょう。
