@@ -173,7 +173,9 @@ make tone:default
 make tone:<あなたのkeymap名>  
 
 #### 注意
-LAYOUT()内の3行目と、void encoder_update_user()のtap_code()はそれぞれ対応させてください。  
+LAYOUT()内の3行目1つ目のキーコードと、void encoder_update_user()のif（clockwise）内のtap_code()には同じものを入力します。
+LAYOUT()内の3行目２つ目のキーコードと、void encoder_update_user()のelse句内のtap_code()には同じものを入力します。
+  
 ※別の値を書いた場合、両方が入力されて大変なことになります。  
 ~~~C
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
