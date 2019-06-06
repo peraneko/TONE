@@ -26,7 +26,7 @@ TONEはQMKファームウェアを利用しており、お客様ご自身で、�
   - [buildguide.md](https://github.com/peraneko/TONE/blob/master/buildguide.md)にてご案内します。  
   
 - 3 ファームウエアの書き込み方法  
-  - TONE_QMK_firmware.mdにてご案内します。  
+  - [TONE_QMK_firmware.md](https://github.com/peraneko/TONE/blob/master/TONE_QMK_firmware.md)にてご案内します。  
   
 - 4 組み立てFAQ  
   - TONE_FAQ.mdにてご案内します。  
