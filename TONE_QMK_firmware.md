@@ -9,7 +9,8 @@ ProMicroは、Arduinoというプロジェクトで生産された、Leonardと�
 まずは物理的にキーが動作しているか確認するためのファームウエアで、ハンダ付けがうまく行っているかを確認しましょう。  
   
 テスト用のファームウエアはこちらに用意してあります。  
-
+[テスト用ファイル](https://github.com/peraneko/TONE/blob/master/TONE_HEX/TONE_test.hex)  
+TONE_test.hexをダウンロードして、わかりやすい場所に置いておきます。  
   
 ファームウエアの書き込みについては、QMK Toolboxを利用します。
 [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)  のダウンロード画面で、自分の使っているOSにあわせてダウンロードするファイルを選んでください。  
@@ -18,4 +19,11 @@ MAC OS/Windowsともに用意されています。
 QMK Toolboxを無事にダウンロードしたら、インストールして実行してください。  
 このような画面が表示されます（Windows MACを利用している方は、適宜読み替えてください）  
 ![QMKToolbox実行画面](https://user-images.githubusercontent.com/5952961/59030186-3d398900-889b-11e9-9e33-f862b5cb6893.png)
+この画面の右上、MicroContlorerのプルダウンがatmega32u4になっているか確認してください。  
+問題がなければ、そのすぐ下にあるAuto-Flashのチェックボックスをクリックして、チェックを入れてください。  
+  
+左側のlocal fileを選択します。これは、書き込みたいファイルを指定するための動作です。
+local fileの右側にあるOPENをクリックして、先程ダウンロードしておいた、TONE_test.hexを選択します。
+  
+  
 
