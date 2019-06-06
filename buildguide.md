@@ -21,7 +21,7 @@ ProMicroの部品が実装されている面にコンスルーを差し込みま
   
 コンスルーの小さな小窓がProMicroに近い側であること、手前奥ともに小窓が見えていることを確認したらひっくり返します。  
 ![ProMicro2](https://user-images.githubusercontent.com/5952961/59015616-5da51b80-887a-11e9-8408-a7d9d0e1b51e.JPG)
-
+ProMicroとコンスルーをはんだ付けします。コテ先が差込やすいように、ProMicroを少し斜めに置くとやりやすいでしょう。  
 ![ProMicro3](https://user-images.githubusercontent.com/5952961/59015626-63026600-887a-11e9-8832-33c9d1f8476a.JPG)
 
 
