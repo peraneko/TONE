@@ -1,7 +1,7 @@
 # ファームウエアの書き込み
 ### ファームウエアとはなにか
-TONEでは、キー入力をPCに渡すために、QMKfirmwareを利用しています。  
-QMKfirmwareは、先程とりつけたProMicroにこれから書き込まれ、キーの入力をPCで認識できる入力形式に変換して、PCに送る動作を行います。  
+TONEでは、キー入力をPCに渡すために、QMKファームウエアを利用しています。  
+QMKファームウエアは、先程とりつけたProMicroにこれから書き込まれ、キーの入力をPCで認識できる入力形式に変換して、PCに送る動作を行います。  
   
 ProMicroは、Arduinoというプロジェクトで生産された、Leonardというシリーズの製品に対する愛称のようなものです。もし、あなたがキーボードを自作する場合、まだ暫くの間無視できないプロダクトであり続けるでしょう。  
   
@@ -105,8 +105,8 @@ TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、�
 近い将来、あなたは自分でTONEの設定ファイルを作りたくなると思います。  
 
 ### キーの割当をカスタマイズする
-この製品はQMKfirmwareによってキーの設定を保持しています。  
-そのため、QMKfirmwareを使うことで、キーの設定を変更することができます。  
+この製品はQMKファームウエアによってキー役割を定義しています。  
+そのため、QMKファームウエアの設定を変更することで、キーの割当を思い通りに設定できます。
   
 実際の手順はこんな感じになります。  
 下記ページよりQMKファームウェアをダウンロードします。
@@ -117,12 +117,12 @@ https://github.com/qmk/qmk_firmware/
 ※gitに慣れている方はクローンの方が良いでしょう。
   
 #### ビルド環境を作る
-macOS
-homebrewを使う手順を説明します。
+##### macOS
+homebrewを使う手順を説明します。  
 
-ターミナルを起動します
-homebrewを使っていなかったらインストールしておきます
-次に下記のコマンドをそれぞれ実行します
+ターミナルを起動します。  
+homebrewを使っていなかったらインストールしておきます。  
+次に下記のコマンドをそれぞれ実行します  
 - brew tap osx-cross/avr
 - brew tap PX4/homebrew-px4
 - brew update
@@ -131,19 +131,28 @@ homebrewを使っていなかったらインストールしておきます
 - brew install gcc-arm-none-eabi
 - brew install avrdude
 
-Windows
-msys2を使う手順を説明します。
-
-msys2のサイトに行き、OSに合わせたインストーラをダウンロード＆インストールします。
-32bit OSの時 : msys2-i686-xxxxxxx.exe
-64bit OSの時 : msys2-x86_64-xxxxxxxx.exe
-msys2を起動します
+##### Windows
+msys2を使う手順を説明します。  
+  
+[msys2](https://www.msys2.org/)のサイトから、自分が使っているWindowsに合わせたインストーラをダウンロード＆インストールします。   
+32bit OSの時 : msys2-i686-xxxxxxx.exe   
+64bit OSの時 : msys2-x86_64-xxxxxxxx.exe  
+msys2を起動します  
 ダウンロードしておいたQMKファームウェアのフォルダに移動します（ここではcドライブ直下にあるものとします）cd /c/qmk_firmware/
-util/msys2_install.sh と実行します
-インストールするパッケージを聞かれますので答えていきます（分からなければ全てYとします）
-終わったらmsys2を再起動します
-ビルドと書き込み
-QMKファームウェアの第一階層で以下のようにします。
+util/msys2_install.sh と実行します  
+インストールするパッケージを聞かれますので答えていきます（分からなければ全てYとします）  
+終わったらmsys2を再起動します   
+
+#### ビルドと書き込み 
+QMKファームウエアのリポジトリには、まだTONEが取り込まれていません。  
+そのため、わたしのGitHubからファイルを取得して、qmk_firmware-master\keyboardsに置く必要があります。  
+  
+ダウンロードするフォルダ  
+
+ダウンロードしたファイルを置く場所
+qmk_firmware-master\keyboards
+
+qmk_firmwareの第一階層で以下のようにします。
 
 make tone:default
 
