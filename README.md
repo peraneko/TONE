@@ -97,5 +97,10 @@ https://www.amazon.co.jp/dp/B001PR1L2S/
 https://www.amazon.co.jp/dp/B001D7TE2E  
 プラモデル用の製品だと刃こぼれする場合があるので、金属専用品を買っておきましょう。  
 この製品は特徴のあるグリップなので、金属用であることがすぐに分かるのが好です。  
+
+### USB TypeAオス to MicroUSBオスケーブル
+充電専用ケーブルでは接続できないのでご注意ください。
+Amazonでの商品例。遊舎工房さんの店頭でも買えます。
+https://www.amazon.co.jp/dp/B0711PVX6Z/
   
 必要な部品と道具が揃ったら、組み立てに進みましょう。
