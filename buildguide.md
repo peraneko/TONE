@@ -12,6 +12,10 @@
   
 裏面  
 ![裏面](https://user-images.githubusercontent.com/5952961/59015604-54b44a00-887a-11e9-970e-1b54efc60440.JPG)
+
 ### リセットスイッチの取り付け
-
-
+裏面からリセットスイッチをとりつけます。  
+![リセットスイッチ](https://user-images.githubusercontent.com/5952961/59015608-5716a400-887a-11e9-9d98-709e4c4d751c.JPG)
+   
+表面側からハンダ付けします。
+![リセットスイッチ表](https://user-images.githubusercontent.com/5952961/59015611-58e06780-887a-11e9-8a01-9fee2a655bb4.JPG)
