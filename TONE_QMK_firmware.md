@@ -61,8 +61,11 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 |ロータリーエンコーダ|0|1|||  
 
 
-すべてのキーとロータリーエンコーダが正常に動いていることを確認したら、マクロパッドとしてのキーマップを書き込みましょう。
-このキーマップは、Adobe photoshop Lightroom Classicでデモンストレーションを行うように設計されています。
+すべてのキーとロータリーエンコーダは正常に動いていましたか？  
+もし反応しないキーがあれば、ハンダ付けが正確に行われているか確認してください。  
+  
+それでは、実際にキーマップを変更して、マクロパッドとして使ってみましょう。  
+このキーマップは、Adobe photoshop Lightroom Classicで快適に操作できるように設計されています。  
 
 ~~~C
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -97,5 +100,60 @@ TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、�
 |下段|SHIFT|CTRL+←(前の画像)|CTRL＋→(次の画像)|CTRL+Z(UNDO)| 
 |ロータリーエンコーダ|時計回り|反時計回り|||  
 |ロータリーエンコーダ|↑|↓|||  
+  
+ここまではできあいの設定ファイルを使って来ました。  
+近い将来、あなたは自分でTONEの設定ファイルを作りたくなると思います。  
 
+### キーの割当をカスタマイズする
+この製品はQMKfirmwareによってキーの設定を保持しています。  
+そのため、QMKfirmwareを使うことで、キーの設定を変更することができます。  
+  
+実際の手順はこんな感じになります。  
+下記ページよりQMKファームウェアをダウンロードします。
+  
+https://github.com/qmk/qmk_firmware/
+  
+ダウンロードしたZIPファイルをわかりやすい場所に展開しておきます。
+※gitに慣れている方はクローンの方が良いでしょう。
+  
+#### ビルド環境を作る
+macOS
+homebrewを使う手順を説明します。
+
+ターミナルを起動します
+homebrewを使っていなかったらインストールしておきます
+次に下記のコマンドをそれぞれ実行します
+- brew tap osx-cross/avr
+- brew tap PX4/homebrew-px4
+- brew update
+- brew install avr-gcc@7
+- brew install dfu-programmer
+- brew install gcc-arm-none-eabi
+- brew install avrdude
+
+Windows
+msys2を使う手順を説明します。
+
+msys2のサイトに行き、OSに合わせたインストーラをダウンロード＆インストールします。
+32bit OSの時 : msys2-i686-xxxxxxx.exe
+64bit OSの時 : msys2-x86_64-xxxxxxxx.exe
+msys2を起動します
+ダウンロードしておいたQMKファームウェアのフォルダに移動します（ここではcドライブ直下にあるものとします）cd /c/qmk_firmware/
+util/msys2_install.sh と実行します
+インストールするパッケージを聞かれますので答えていきます（分からなければ全てYとします）
+終わったらmsys2を再起動します
+ビルドと書き込み
+QMKファームウェアの第一階層で以下のようにします。
+
+make tone:default
+
+GUIでの書き込みには冒頭で説明したQMK Toolboxが使えます。
+
+
+カスタマイズ
+/keyboards/helix/rev2/keymaps/ にある default フォルダを複製して好きな名前にします。 以後、それを修正します。
+
+その時のビルドコマンドは以下のようになります。
+
+make helix:<あなたのkeymap名>
 
