@@ -16,9 +16,10 @@
 ### ProMicroの組み立て
 ![ProMicro1](https://user-images.githubusercontent.com/5952961/59015614-5b42c180-887a-11e9-92bd-fa32baa3fef1.JPG)
 ProMicroの部品が実装されている面にコンスルーを差し込みます。  
-※シルバーの袋にProMicroと一緒にはいっているのはピンヘッダなので、今回は使いません。  
+コンスルーはピンの部分が金色で、細い針金を折ったものが使われています。  
+※シルバーの袋（帯電防止袋）にProMicroと一緒にはいっている似た形状のモノはピンヘッダなので、今回は使いません。  
   
-必ずコンスルーの小さな小窓がProMicro側であること、手前奥ともに小窓が見えていることを確認したらひっくり返します。  
+コンスルーの小さな小窓がProMicroに近い側であること、手前奥ともに小窓が見えていることを確認したらひっくり返します。  
 ![ProMicro2](https://user-images.githubusercontent.com/5952961/59015616-5da51b80-887a-11e9-8408-a7d9d0e1b51e.JPG)
 
 ![ProMicro3](https://user-images.githubusercontent.com/5952961/59015626-63026600-887a-11e9-8832-33c9d1f8476a.JPG)
