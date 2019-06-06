@@ -200,7 +200,7 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 長旅お疲れ様でした。ぜひTONEをご愛用いただけますよう、お願い申し上げます。  
 
 ### 余談 QMKファームウエアについて詳しく知りたくなったら
-[リファレンス](https://docs.qmk.fm/#/)を読みましょう。  
+[公式のリファレンス](https://docs.qmk.fm/#/)を読みましょう。  
 とくにお世話になるのが、次のページです。  
   
 [keycode](https://docs.qmk.fm/#/keycodes)    
