@@ -14,4 +14,4 @@ MAC OS/Windowsともに用意されています。
   
 QMK Toolboxを無事にダウンロードしたら、インストールして実行してください。  
 このような画面が表示されます（Windows MACを利用している方は、適宜読み替えてください）  
-! [QMKToolbox実行画面](https://user-images.githubusercontent.com/5952961/59030186-3d398900-889b-11e9-9e33-f862b5cb6893.png)
+![QMKToolbox実行画面](https://user-images.githubusercontent.com/5952961/59030186-3d398900-889b-11e9-9e33-f862b5cb6893.png)
