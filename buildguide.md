@@ -13,6 +13,18 @@
 裏面  
 ![裏面](https://user-images.githubusercontent.com/5952961/59015604-54b44a00-887a-11e9-970e-1b54efc60440.JPG)
 
+### ProMicroの組み立て
+![ProMicro1](https://user-images.githubusercontent.com/5952961/59015614-5b42c180-887a-11e9-92bd-fa32baa3fef1.JPG)
+ProMicroの部品が実装されている面にコンスルーを差し込みます。  
+※シルバーの袋にProMicroと一緒にはいっているのはピンヘッダなので、今回は使いません。  
+  
+必ずコンスルーの小さな小窓がProMicro側であること、手前奥ともに小窓が見えていることを確認したらひっくり返します。  
+![ProMicro2](https://user-images.githubusercontent.com/5952961/59015616-5da51b80-887a-11e9-8408-a7d9d0e1b51e.JPG)
+
+![ProMicro3](https://user-images.githubusercontent.com/5952961/59015626-63026600-887a-11e9-8832-33c9d1f8476a.JPG)
+
+
+
 ### リセットスイッチの取り付け
 裏面からリセットスイッチをとりつけます。  
 ![リセットスイッチ](https://user-images.githubusercontent.com/5952961/59015608-5716a400-887a-11e9-9d98-709e4c4d751c.JPG)
