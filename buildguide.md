@@ -36,3 +36,10 @@ ProMicroとコンスルーをはんだ付けします。コテ先が差込やす
   
 ![リセットスイッチ表](https://user-images.githubusercontent.com/5952961/59017786-62b89980-887f-11e9-8f38-b8d8dbdde931.JPG)
 完成後の写真ですがこうなってればOK  
+
+###キースイッチの取り付け
+PCBを裏返し、表面からキースイッチを差し込んでいきます。
+![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015641-6ac20a80-887a-11e9-9752-d6244277618a.JPG)
+![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015641-6ac20a80-887a-11e9-9752-d6244277618a.JPG)
+![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015641-6ac20a80-887a-11e9-9752-d6244277618a.JPG)
+![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015641-6ac20a80-887a-11e9-9752-d6244277618a.JPG)
