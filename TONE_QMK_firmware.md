@@ -192,8 +192,14 @@ void encoder_update_user(uint16_t index, bool clockwise) {
   }
 }
 ~~~
+
+ここまでの説明で、あなたの好みのキー配置（キーマップ）が設定できたかと思います。  
+ハードウェアからミドルウエア（ファームウエア）まで、簡単なものばかりとはいえ網羅的にたどってこないと、ここまでたどり着けません。  
+自作キーボードを作ることは、あなたがPCを使いこなせているかどうかの身近な試金石です。  
   
-### QMKファームウエアについて詳しく知りたくなったら
+長旅お疲れ様でした。ぜひTONEをご愛用いただけますよう、お願い申し上げます。  
+
+### 余談 QMKファームウエアについて詳しく知りたくなったら
 [リファレンス](https://docs.qmk.fm/#/)を読みましょう。  
 とくにお世話になるのが、次のページです。  
   
@@ -204,5 +210,5 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 <あなたのkeymap名>フォルダ内のkeymap.cの17行目あたり。#include QMK_KEYBOARD_Hと書かれているつぎの行に、下記を追加してください。  
 `include "keymap_jp.h"`
 
-[keymap_jp.h](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_jp.h)
-[【QMK】JPキーコードでキーマップを定義する](https://skyhigh-works.hatenablog.com/entry/2018/11/14/033242)
+[keymap_jp.h](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_jp.h)  
+[【QMK】JPキーコードでキーマップを定義する](https://skyhigh-works.hatenablog.com/entry/2018/11/14/033242)  
