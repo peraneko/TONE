@@ -16,8 +16,8 @@ TONE_test.hexをダウンロードして、わかりやすい場所に置いて�
 [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)  のダウンロード画面で、自分の使っているOSにあわせてダウンロードするファイルを選んでください。  
 MAC OS/Windowsともに用意されています。  
   
-QMK Toolboxを無事にダウンロードしたら、インストールして実行してください。  
-このような画面が表示されます（Windows MACを利用している方は、適宜読み替えてください）  
+QMK Toolboxを無事にダウンロードできたら、インストールして実行してください。  
+このような画面が表示されます（Windows版 MACを利用している方は、適宜読み替えてください）  
 ![QMKToolbox実行画面](https://user-images.githubusercontent.com/5952961/59032589-a45a3c00-88a1-11e9-94c2-eec1b0bca2c6.png)  
 この画面の右上、MicroContlorerのプルダウンがatmega32u4になっているか確認してください。  
 問題がなければ、そのすぐ下にあるAuto-Flashのチェックボックスをクリックして、チェックを入れてください。  
@@ -29,11 +29,50 @@ local fileの右側にあるOPENをクリックして、先程ダウンロード
 すると、自動的に書き込みが進んでいきます。  
 書き込みが終わるとavrdude.exe done.  Thank you.と表示されます。
   
+TONE_test.hexのキーマップは下記の通りです。  
 ~~~C
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT( 
     KC_A,  KC_B,  KC_C, KC_B,\
     KC_E,  KC_F,  KC_G, KC_H,\
     KC_0, KC_1 \
   ),
+};
+
+void encoder_update_user(uint16_t index, bool clockwise) {
+        if (clockwise) {
+            tap_code(KC_0);
+        } else {
+            tap_code(KC_1);
+        }
+}
 ~~~
-    
+上段の４キーが左からABCD  
+下段の４キーが左からEFGH  
+ロータリーエンコーダ時計回りが0  
+反時計回りが1です。  
+  
+すべてのキーとロータリーエンコーダが正常に動いていることを確認したら、マクロパッドとしてのキーマップを書き込みましょう。
+このキーマップは、Adobe photoshop Lightroom Classicでデモンストレーションを行うように設計されています。
+
+~~~C
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+  [0] = LAYOUT( 
+    LCTL(LSFT(KC_E)),  LSFT(KC_TAB),   KC_TAB,         KC_0,\
+    KC_LSFT,        LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_Z),\
+    KC_UP,          KC_DOWN\
+  ),
+};
+
+void encoder_update_user(uint16_t index, bool clockwise) {
+   if (clockwise) {
+     tap_code(KC_UP);
+   } else {
+      tap_code(KC_DOWN);
+   }
+}
+~~~
+[TONE_ALR.hex](https://github.com/peraneko/TONE/blob/master/TONE_HEX/TONE_ALR.hex)  
+TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、先程の手順でProMicroに書き込んでみましょう。
+
+
