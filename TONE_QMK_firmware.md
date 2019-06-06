@@ -201,8 +201,8 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 設定したいキーのコードを調べるのに有用です。  
 
 一部日本語特化したい場合は、keymap_jp.hをincludeするとはかどります。  
-<あなたのkeymap名>フォルダ内のkeymap.cの17行目あたり。#include QMK_KEYBOARD_Hと書かれているつぎの行に、下記を追加してください。
-'#include "keymap_jp.h" '
+<あなたのkeymap名>フォルダ内のkeymap.cの17行目あたり。#include QMK_KEYBOARD_Hと書かれているつぎの行に、下記を追加してください。  
+`include "keymap_jp.h"`
 
 [keymap_jp.h](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_jp.h)
 [【QMK】JPキーコードでキーマップを定義する](https://skyhigh-works.hatenablog.com/entry/2018/11/14/033242)
