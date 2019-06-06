@@ -114,6 +114,7 @@ TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、�
 https://github.com/qmk/qmk_firmware/
   
 ダウンロードしたZIPファイルをわかりやすい場所に展開しておきます。
+Cドライブ直下に置いたことにして、説明を続けます。  
 ※gitに慣れている方はクローンの方が良いでしょう。
   
 #### ビルド環境を作る
@@ -138,31 +139,70 @@ msys2を使う手順を説明します。
 32bit OSの時 : msys2-i686-xxxxxxx.exe   
 64bit OSの時 : msys2-x86_64-xxxxxxxx.exe  
 msys2を起動します  
-ダウンロードしておいたQMKファームウェアのフォルダに移動します（ここではcドライブ直下にあるものとします）cd /c/qmk_firmware/
-util/msys2_install.sh と実行します  
-インストールするパッケージを聞かれますので答えていきます（分からなければ全てYとします）  
-終わったらmsys2を再起動します   
+  
+ダウンロードしておいたQMKファームウェアのフォルダに移動します。  
+先程、Cドライブ直下にファイルを置きました。  
 
-#### ビルドと書き込み 
+cd /c/qmk_firmware/util/msys2_install.sh と入力して、実行します。  
+インストールするパッケージを聞かれますので答えていきます。不明な質問であれば、全てYとしてください。  
+終わったらmsys2を再起動します    
+
+#### 設定ファイルのダウンロード   
 QMKファームウエアのリポジトリには、まだTONEが取り込まれていません。  
 そのため、わたしのGitHubからファイルを取得して、qmk_firmware-master\keyboardsに置く必要があります。  
   
 ダウンロードするフォルダ  
-
-ダウンロードしたファイルを置く場所
+https://github.com/peraneko/TONE/tree/master/tone  
+  
+ダウンロードしたファイルを置く場所  
 qmk_firmware-master\keyboards
+  
+#### 設定ファイルのビルド
+qmk_firmwareの第一階層で以下のようにします。  
+  
+make tone:default   
+しばらく時間がかかるかもしれませんが、tone_default.hexというファイルが生成されます。
+このファイルをQMK ToolBoxでProMicroに書き込めば、使用できます。
 
-qmk_firmwareの第一階層で以下のようにします。
+### キーマップのカスタマイズ
+/keyboards/tone/keymaps/ にある default フォルダを複製して好きな名前にします。 
+以後、これを<あなたのkeymap名>と呼びます。
+<あなたのkeymap名>フォルダ内のkeymap.cを好みに合わせて編集してください。  
+  
+編集後のビルドコマンドは以下のようになります。  
+make tone:<あなたのkeymap名>  
 
-make tone:default
+#### 注意
+LAYOUT()内の3行目と、void encoder_update_user()のtap_code()はそれぞれ対応させてください。  
+※別の値を書いた場合、両方が入力されて大変なことになります。  
+~~~C
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+  [0] = LAYOUT( 
+    LCTL(LSFT(KC_E)),  LSFT(KC_TAB),   KC_TAB,         KC_0,\
+    KC_LSFT,        LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_Z),\
+    KC_UP,          KC_DOWN\
+  ),
+};
 
-GUIでの書き込みには冒頭で説明したQMK Toolboxが使えます。
+void encoder_update_user(uint16_t index, bool clockwise) {
+  if (clockwise) {
+    tap_code(KC_UP);
+  } else {
+    tap_code(KC_DOWN);
+  }
+}
+~~~
+  
+### QMKファームウエアについて詳しく知りたくなったら
+[リファレンス](https://docs.qmk.fm/#/)を読みましょう。  
+とくにお世話になるのが、次のページです。  
+  
+[keycode](https://docs.qmk.fm/#/keycodes)    
+設定したいキーのコードを調べるのに有用です。  
 
+一部日本語特化したい場合は、keymap_jp.hをincludeするとはかどります。  
+<あなたのkeymap名>フォルダ内のkeymap.cの17行目あたり。#include QMK_KEYBOARD_Hと書かれているつぎの行に、下記を追加してください。
+'#include "keymap_jp.h" '
 
-カスタマイズ
-/keyboards/helix/rev2/keymaps/ にある default フォルダを複製して好きな名前にします。 以後、それを修正します。
-
-その時のビルドコマンドは以下のようになります。
-
-make helix:<あなたのkeymap名>
-
+[keymap_jp.h](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_jp.h)
+[【QMK】JPキーコードでキーマップを定義する](https://skyhigh-works.hatenablog.com/entry/2018/11/14/033242)
