@@ -28,7 +28,11 @@ local fileの右側にあるOPENをクリックして、先程ダウンロード
 選択したら、TONEのリセットスイッチを押します。
 すると、自動的に書き込みが進んでいきます。すべて書き込まれると、PeranekoFactory:tone connectedと表示されます。
   
-  
-  
-
+~~~C
+    [0] = LAYOUT( 
+    KC_A,  KC_B,  KC_C, KC_B,\
+    KC_E,  KC_F,  KC_G, KC_H,\
+    KC_0, KC_1 \
+  ),
+~~~
     
