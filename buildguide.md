@@ -40,6 +40,15 @@ ProMicroとコンスルーをはんだ付けします。コテ先が差込やす
 ###キースイッチの取り付け
 PCBを裏返し、表面からキースイッチを差し込んでいきます。
 ![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015641-6ac20a80-887a-11e9-9752-d6244277618a.JPG)
+8キーすべて差し込んだら、裏返します。   
+![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015653-70b7eb80-887a-11e9-9d5d-cd56120fc6c0.JPG)
+裏返したら、ProMicroと干渉するピンを切り取ります。
 ![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015641-6ac20a80-887a-11e9-9752-d6244277618a.JPG)
-![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015641-6ac20a80-887a-11e9-9752-d6244277618a.JPG)
+切り取る長さはこのくらいです。
+![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015750-a8bf2e80-887a-11e9-8151-5c1a863c8237.JPG)
+
+
+
+
+
 ![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015641-6ac20a80-887a-11e9-9752-d6244277618a.JPG)
