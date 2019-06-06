@@ -105,5 +105,5 @@ https://www.amazon.co.jp/dp/B0711PVX6Z/
 Androidスマホを使っている／使っていた方はそのケーブルが使えると思います。  
 また、遊舎工房さんの店頭でも買えます。  
   
-必要な部品と道具が揃ったら、組み立てに進みましょう。
-[組立手順　ビルドガイド](https://github.com/peraneko/TONE/blob/master/buildguide.md)
+必要な部品と道具が揃ったら、組み立てに進みましょう。  
+[組立手順/ビルドガイド](https://github.com/peraneko/TONE/blob/master/buildguide.md)
