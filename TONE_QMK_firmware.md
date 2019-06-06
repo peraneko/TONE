@@ -85,7 +85,17 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、先程の手順でProMicroに書き込んでみましょう。
   
 上段の４キーが左からCtrl+SHIFTT+E（書き出し）　SHIFT+TAB　TAB　0    
-下段の４キーが左からSHIFT　CTRL+←（前の画像）　CTRL＋→（次の画像） CTRL+Z  
+下段の４キーが左からSHIFT　CTRL+←（前の画像）　CTRL＋→（次の画像） CTRL+Z（UNDO)  
 ロータリーエンコーダ時計回りが↑
 反時計回りが↓です。
   
+わけわからないですね、表にします。  
+  
+|-|左１|左２|左３|左４|  
+|---|---|---|---|---|  
+|上段|Ctrl+SHIFTT+E(書き出し)|SHIFT+TAB|TAB|0|  
+|下段|SHIFT|CTRL+←(前の画像)|CTRL＋→(次の画像)|CTRL+Z(UNDO)| 
+|ロータリーエンコーダ|時計回り|反時計回り|||  
+|ロータリーエンコーダ|↑|↓|||  
+
+
