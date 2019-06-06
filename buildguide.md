@@ -58,10 +58,18 @@ PCBを裏返し、表面からキースイッチを差し込んでいきます�
 ハンダ付けが終わった状態はこんな感じです。  
 ![ロータリエンコーダ取り付け](https://user-images.githubusercontent.com/5952961/59020673-723ae100-8885-11e9-8aa4-36966ac36e32.JPG)
 
+### ProMicroの取り付け
+ProMicroとTONEのPCBははんだ付けせずに取り付けをおこないます。
+![ProMicro取り付け](https://user-images.githubusercontent.com/5952961/59020707-81219380-8885-11e9-8cc4-b973c33fbd1f.JPG)
+根本まで確実に差し込んでください。  
+※ここでハンダ付けをしないのは、ProMicroが破損した場合に交換を容易にするためです。  
+　悲しい先例を見たい場合は、mogeMicroで検索してみてください。
+
+### 状況の確認
+これで青基板に取り付けるスイッチやProMicroは全て取り付けられているはずです。
+![表側確認](https://user-images.githubusercontent.com/5952961/59021803-8384ed00-8887-11e9-8c29-98c3eab786f6.JPG)
+![裏側確認](https://user-images.githubusercontent.com/5952961/59021802-82ec5680-8887-11e9-87a6-f2d4aa6b91b1.JPG)
 
 
+### ボトムプレートの取り付け
 
-
-
-
-![キースイッチ取り付け](https://user-images.githubusercontent.com/5952961/59015641-6ac20a80-887a-11e9-9752-d6244277618a.JPG)
