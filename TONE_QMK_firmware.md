@@ -53,9 +53,11 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 ロータリーエンコーダ時計回りが0  
 反時計回りが1です。    
   
+|左|中央左|中央右|右|  
 |---|---|---|---|  
 |A|B|C|D|  
 |E|F|G|H|  
+| | |時計回り|反時計回り|
 | | |1|0|  
 
 
