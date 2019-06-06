@@ -19,3 +19,7 @@
    
 表面側からハンダ付けします。
 ![リセットスイッチ表](https://user-images.githubusercontent.com/5952961/59015611-58e06780-887a-11e9-8a01-9fee2a655bb4.JPG)
+リセットスイッチの足がくの字になっていますが、根本と穴がハンダ付けできていれば大丈夫です。
+  
+![リセットスイッチ表](https://user-images.githubusercontent.com/5952961/59017786-62b89980-887f-11e9-8f38-b8d8dbdde931.JPG)
+完成後の写真ですがこうなってればOK  
