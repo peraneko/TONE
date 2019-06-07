@@ -31,20 +31,19 @@ local fileの右側にあるOPENをクリックして、先程ダウンロード
 TONE_test.hexのキーマップは下記の通りです。  
 ~~~C
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT( 
-    KC_A,  KC_B,  KC_C, KC_B,\
-    KC_E,  KC_F,  KC_G, KC_H,\
-    KC_0, KC_1 \
-  ),
-};
+    [0] = LAYOUT( 
+        KC_A, KC_B, KC_C, KC_D,
+        KC_E, KC_F, KC_G, KC_H
+        )
+    };
 
 void encoder_update_user(uint16_t index, bool clockwise) {
-  if (clockwise) {
-    tap_code(KC_0);
-  } else {
-    tap_code(KC_1);
+    if (clockwise) {
+      tap_code(KC_0);
+    } else {
+      tap_code(KC_1);
+    }
   }
-}
 ~~~
 
 上段の４キーが左からABCD  
@@ -55,9 +54,11 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 |-|左１|左２|左３|左４|  
 |---|---|---|---|---|  
 |上段|A|B|C|D|  
-|下段|E|F|G|H| 
-|ロータリーエンコーダ|時計回り|反時計回り|||  
-|ロータリーエンコーダ|0|1|||  
+|下段|E|F|G|H|  
+
+|ロータリーエンコーダ|時計回り|反時計回り|  
+|---|---|---|  
+||0|1|  
 
 
 すべてのキーとロータリーエンコーダは正常に動いていましたか？  
@@ -68,26 +69,25 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 
 ~~~C
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT( 
-    LCTL(LSFT(KC_E)),  LSFT(KC_TAB),   KC_TAB,         KC_0,\
-    KC_LSFT,        LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_Z),\
-    KC_UP,          KC_DOWN\
-  ),
+    [0] = LAYOUT( 
+        C(S(KC_E)), S(KC_TAB),  KC_TAB,      KC_0,
+        KC_LSFT,    C(KC_LEFT), C(KC_RIGHT), C(KC_Z)
+        )
 };
 
 void encoder_update_user(uint16_t index, bool clockwise) {
-  if (clockwise) {
-    tap_code(KC_UP);
-  } else {
-    tap_code(KC_DOWN);
+    if (clockwise) {
+      tap_code(KC_UP);
+    } else {
+      tap_code(KC_DOWN);
+    }
   }
-}
 ~~~
 [TONE_ALR.hex](https://github.com/peraneko/TONE/blob/master/TONE_HEX/TONE_ALR.hex)  
 TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、先程の手順でProMicroに書き込んでみましょう。
   
 上段の４キーが左からCtrl+SHIFT+E（書き出し）　SHIFT+TAB　TAB　0    
-下段の４キーが左からSHIFT　CTRL+←（前の画像）　CTRL＋→（次の画像） CTRL+Z（UNDO)  
+下段の４キーが左からSHIFT　CTRL+←（前の画像）　CTRL＋→（次の画像） CTRL+Z（UNDO）  
 ロータリーエンコーダ時計回りが↑
 反時計回りが↓です。
   
@@ -97,6 +97,7 @@ TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、�
 |---|---|---|---|---|  
 |上段|Ctrl+SHIFT+E(書き出し)|SHIFT+TAB|TAB|0|  
 |下段|SHIFT|CTRL+←(前の画像)|CTRL＋→(次の画像)|CTRL+Z(UNDO)| 
+  
 |ロータリーエンコーダ|時計回り|反時計回り|||  
 |ロータリーエンコーダ|↑|↓|||  
   
@@ -181,29 +182,6 @@ qmk_firmwareの第一階層で`./util/new_keymap.sh` を使うと、下記の様
   
 編集後のビルドコマンドは以下のようになります。  
 make tone:<あなたのkeymap名>  
-
-#### 注意
-LAYOUT()内の3行目1つ目のキーコードと、void encoder_update_user()のif（clockwise）内のtap_code()には同じものを入力します。
-LAYOUT()内の3行目２つ目のキーコードと、void encoder_update_user()のelse句内のtap_code()には同じものを入力します。
-  
-※別の値を書いた場合、両方が入力されて大変なことになります。  
-~~~C
-const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT( 
-    LCTL(LSFT(KC_E)),  LSFT(KC_TAB),   KC_TAB,         KC_0,\
-    KC_LSFT,        LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_Z),\
-    KC_UP,          KC_DOWN\
-  ),
-};
-
-void encoder_update_user(uint16_t index, bool clockwise) {
-  if (clockwise) {
-    tap_code(KC_UP);
-  } else {
-    tap_code(KC_DOWN);
-  }
-}
-~~~
 
 ここまでの説明で、あなたの好みのキー配置（キーマップ）が設定できたかと思います。  
 ハードウェアからミドルウエア（ファームウエア）まで、簡単なものばかりとはいえ網羅的にたどってこないと、ここまでたどり着けません。  
