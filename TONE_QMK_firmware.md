@@ -53,8 +53,8 @@ void encoder_update_user(uint16_t index, bool clockwise) {
   
 |-|左１|左２|左３|左４|  
 |---|---|---|---|---|  
-|上段|A|B|C|D|  
-|下段|E|F|G|H|  
+|上段|a|b|c|d|  
+|下段|e|f|g|h|  
 
 |ロータリーエンコーダ|時計回り|反時計回り|  
 |---|---|---|  
