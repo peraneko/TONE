@@ -4,7 +4,7 @@
 
 A short description of the keyboard/project
 
-Keyboard Maintainer: [%YOUR_NAME%](https://github.com/yourusername)  
+Keyboard Maintainer: [peraneko](https://github.com/peraneko)  
 Hardware Supported: The PCBs, controllers supported  
 Hardware Availability: links to where you can find this hardware
 
