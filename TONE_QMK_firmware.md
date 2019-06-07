@@ -17,7 +17,8 @@ TONE_test.hexをダウンロードして、わかりやすい場所に置いて�
 MAC OS/Windowsともに用意されています。  
   
 QMK Toolboxを無事にダウンロードできたら、インストールして実行してください。  
-このような画面が表示されます（Windows版 MACを利用している方は、適宜読み替えてください）  
+このような画面が表示されます。この画面はWindows版のためMACを利用している方は、適宜読み替えてください）  
+  
 ![QMKToolbox実行画面](https://user-images.githubusercontent.com/5952961/59032589-a45a3c00-88a1-11e9-94c2-eec1b0bca2c6.png)  
 この画面の右上、MicroContlorerのプルダウンがatmega32u4になっているか確認してください。  
 問題がなければ、そのすぐ下にあるAuto-Flashのチェックボックスをクリックして、チェックを入れてください。  
