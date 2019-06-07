@@ -166,8 +166,17 @@ make tone:default
 このファイルをQMK ToolBoxでProMicroに書き込めば、使用できます。
 
 ### キーマップのカスタマイズ
-/keyboards/tone/keymaps/ にある default フォルダを複製して好きな名前にします。 
-以後、これを<あなたのkeymap名>と呼びます。
+既存のキーマップをカスタマイズする際は、現在のキーマップをバックアップしましょう。  
+どこか別のフォルダにいれて、keymap_org.cなどとリネームしておけば良いでしょう。  
+  
+qmk_firmwareの第一階層で`./util/new_keymap.sh` を使うと、下記の様に<keyboard>のdefaultキーマップをベースに指定の<user_name>で複製することができます。  
+```:shell
+./util/new_keymap.sh <keyboard> <user_name>
+```
+<keyboard>にはtoneが入ります。  
+<user_name>には、バージョン名やどういう使い方を意図しているのかを入力すると便利です。   
+  
+上記操作でできたフォルダは、以後、<あなたのkeymap名>と呼びます。
 <あなたのkeymap名>フォルダ内のkeymap.cを好みに合わせて編集してください。  
   
 編集後のビルドコマンドは以下のようになります。  
