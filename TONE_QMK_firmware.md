@@ -33,7 +33,7 @@ TONE_test.hexのキーマップは下記の通りです。
 ~~~C
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT( 
-    KC_A,  KC_B,  KC_C, KC_B,\
+    KC_A,  KC_B,  KC_C, KC_D,\
     KC_E,  KC_F,  KC_G, KC_H,\
     KC_0, KC_1 \
   ),
@@ -54,8 +54,8 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 
 |-|左１|左２|左３|左４|  
 |---|---|---|---|---|  
-|上段|A|B|C|D|  
-|下段|E|F|G|H| 
+|上段|a|b|c|d|  
+|下段|e|f|g|h| 
 |ロータリーエンコーダ|時計回り|反時計回り|||  
 |ロータリーエンコーダ|0|1|||  
 
