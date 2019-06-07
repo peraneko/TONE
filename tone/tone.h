@@ -1,4 +1,4 @@
-/* Copyright 2018 REPLACE_WITH_YOUR_NAME
+/* Copyright 2019 peraneko
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -13,8 +13,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef TONE_H
-#define TONE_H
+#pragma once
 
 #include "quantum.h"
 
@@ -27,10 +26,9 @@
  * represents the switch matrix.
  */
 #define LAYOUT( \
-    K00,K01,K02,K03,K04,K05,K06,K07,K08,K09 \
+    K00, K01, K02, K03, \
+    K04, K05, K06, K07 \
 ) \
 { \
-    { K00,K01,K02,K03,K04,K05,K06,K07,K08,K09 }, \
+    { K00, K01, K02, K03, K04, K05, K06, K07 }, \
 }
-
-#endif
