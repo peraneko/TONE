@@ -20,7 +20,7 @@ QMK Toolboxを無事にダウンロードできたら、インストールして
 このような画面が表示されます。この画面はWindows版のためMACを利用している方は、適宜読み替えてください）  
   
 ![QMKToolbox実行画面](https://user-images.githubusercontent.com/5952961/59032589-a45a3c00-88a1-11e9-94c2-eec1b0bca2c6.png)  
-この画面の右上、MicroContlorerのプルダウンがatmega32u4になっているか確認してください。  
+この画面の右上、MicroControllerのプルダウンがatmega32u4になっているか確認してください。  
 問題がなければ、そのすぐ下にあるAuto-Flashのチェックボックスをクリックして、チェックを入れてください。  
   
 左側のlocal fileを選択します。これは、書き込みたいファイルを指定するための動作です。
@@ -88,7 +88,7 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 [TONE_ALR.hex](https://github.com/peraneko/TONE/blob/master/TONE_HEX/TONE_ALR.hex)  
 TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、先程の手順でProMicroに書き込んでみましょう。
   
-上段の４キーが左からCtrl+SHIFTT+E（書き出し）　SHIFT+TAB　TAB　0    
+上段の４キーが左からCtrl+SHIFT+E（書き出し）　SHIFT+TAB　TAB　0    
 下段の４キーが左からSHIFT　CTRL+←（前の画像）　CTRL＋→（次の画像） CTRL+Z（UNDO)  
 ロータリーエンコーダ時計回りが↑
 反時計回りが↓です。
@@ -97,7 +97,7 @@ TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、�
   
 |-|左１|左２|左３|左４|  
 |---|---|---|---|---|  
-|上段|Ctrl+SHIFTT+E(書き出し)|SHIFT+TAB|TAB|0|  
+|上段|Ctrl+SHIFT+E(書き出し)|SHIFT+TAB|TAB|0|  
 |下段|SHIFT|CTRL+←(前の画像)|CTRL＋→(次の画像)|CTRL+Z(UNDO)| 
 |ロータリーエンコーダ|時計回り|反時計回り|||  
 |ロータリーエンコーダ|↑|↓|||  
@@ -222,7 +222,7 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 
 一部日本語特化したい場合は、keymap_jp.hをincludeするとはかどります。  
 <あなたのkeymap名>フォルダ内のkeymap.cの17行目あたり。#include QMK_KEYBOARD_Hと書かれているつぎの行に、下記を追加してください。  
-`include "keymap_jp.h"`
+`#include "keymap_jp.h"`
 
 [keymap_jp.h](https://github.com/qmk/qmk_firmware/blob/master/quantum/keymap_extras/keymap_jp.h)  
 [【QMK】JPキーコードでキーマップを定義する](https://skyhigh-works.hatenablog.com/entry/2018/11/14/033242)  
