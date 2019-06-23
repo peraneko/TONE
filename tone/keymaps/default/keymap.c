@@ -19,7 +19,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( 
         C(S(KC_E)), S(KC_TAB),  KC_TAB,      KC_0,
         KC_LSFT,    C(KC_LEFT), C(KC_RIGHT), C(KC_Z),
-        _______,    _______ // Set with encoder_update_user () 
     )
 };
 
