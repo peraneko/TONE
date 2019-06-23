@@ -31,20 +31,25 @@ local fileの右側にあるOPENをクリックして、先程ダウンロード
 
 TONE_test.hexのキーマップは下記の通りです。  
 ~~~C
+#include QMK_KEYBOARD_H
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT( 
-    KC_A,  KC_B,  KC_C, KC_D,\
-    KC_E,  KC_F,  KC_G, KC_H,\
-    KC_0, KC_1 \
-  ),
+    [0] = LAYOUT( 
+        KC_A,       KC_B,      KC_C,     KC_D,\
+        KC_E,       KC_F,      KC_G,     KC_H,\
+        _______,    _______ // Set with encoder_update_user () 
+    )
 };
+
+/* Rotary encoder settings */
 void encoder_update_user(uint16_t index, bool clockwise) {
-  if (clockwise) {
-    tap_code(KC_0);
-  } else {
-    tap_code(KC_1);
-  }
+   if (clockwise) {
+        tap_code(KC_UP);    //Rotary encoder clockcwise
+    } else {
+        tap_code(KC_DOWN);  //Rotary encoder Reverse clockcwise
+    }
 }
+
 ~~~
 
 上段の４キーが左からABCD  
@@ -67,20 +72,25 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 このキーマップは、Adobe photoshop Lightroom Classicで快適に操作できるように設計されています。  
 
 ~~~C
+#include QMK_KEYBOARD_H
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT( 
-    LCTL(LSFT(KC_E)),  LSFT(KC_TAB),   KC_TAB,         KC_0,\
-    KC_LSFT,        LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_Z),\
-    KC_UP,          KC_DOWN\
-  ),
+    [0] = LAYOUT( 
+        C(S(KC_E)), S(KC_TAB),  KC_TAB,      KC_0,
+        KC_LSFT,    C(KC_LEFT), C(KC_RIGHT), C(KC_Z),
+        _______,    _______ // Set with encoder_update_user () 
+    )
 };
+
+/* Rotary encoder settings */
 void encoder_update_user(uint16_t index, bool clockwise) {
-  if (clockwise) {
-    tap_code(KC_UP);
-  } else {
-    tap_code(KC_DOWN);
-  }
+   if (clockwise) {
+        tap_code(KC_UP);    //Rotary encoder clockcwise
+    } else {
+        tap_code(KC_DOWN);  //Rotary encoder Reverse clockcwise
+    }
 }
+
 ~~~
 [TONE_ALR.hex](https://github.com/peraneko/TONE/blob/master/TONE_HEX/TONE_ALR.hex)  
 TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、先程の手順でProMicroに書き込んでみましょう。
@@ -181,25 +191,26 @@ qmk_firmwareの第一階層で`./util/new_keymap.sh` を使うと、下記の様
 編集後のビルドコマンドは以下のようになります。  
 make tone:<あなたのkeymap名>  
 
-#### 注意
-LAYOUT()内の3行目1つ目のキーコードと、void encoder_update_user()のif（clockwise）内のtap_code()には同じものを入力します。
-LAYOUT()内の3行目２つ目のキーコードと、void encoder_update_user()のelse句内のtap_code()には同じものを入力します。
-
-※別の値を書いた場合、両方が入力されて大変なことになります。  
+#### 注意　
+ロータリーエンコーダを時計回り方向に回した場合に入力したいキーコードは
+if（clockwise）内のtap_code()に書き込みます。
+逆時計周りに方向については、else句の下の行のtap_code()に書き込みます。
 ~~~C
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT( 
-    LCTL(LSFT(KC_E)),  LSFT(KC_TAB),   KC_TAB,         KC_0,\
-    KC_LSFT,        LCTL(KC_LEFT),  LCTL(KC_RIGHT), LCTL(KC_Z),\
-    KC_UP,          KC_DOWN\
-  ),
+    [0] = LAYOUT( 
+        C(S(KC_E)), S(KC_TAB),  KC_TAB,      KC_0,
+        KC_LSFT,    C(KC_LEFT), C(KC_RIGHT), C(KC_Z),
+        _______,    _______ // Set with encoder_update_user () 
+    )
 };
+
+/* Rotary encoder settings */
 void encoder_update_user(uint16_t index, bool clockwise) {
-  if (clockwise) {
-    tap_code(KC_UP);
-  } else {
-    tap_code(KC_DOWN);
-  }
+   if (clockwise) {
+        tap_code(KC_UP);    //Rotary encoder clockcwise
+    } else {
+        tap_code(KC_DOWN);  //Rotary encoder Reverse clockcwise
+    }
 }
 ~~~
 
