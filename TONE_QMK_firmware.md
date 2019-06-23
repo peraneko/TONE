@@ -8,8 +8,8 @@ QMKファームウエアは、先程とりつけたProMicroにこれから書き
 まずは物理的にキーが動作しているか確認するためのファームウエアで、ハンダ付けがうまく行っているかを確認しましょう。  
 
 テスト用のファームウエアはこちらに用意してあります。  
-[TONE_test.hex](https://github.com/peraneko/TONE/blob/master/TONE_HEX/TONE_test.hex)  
-TONE_test.hexをダウンロードして、わかりやすい場所に置いておきます。  
+[tone_test.hex](https://github.com/peraneko/TONE/blob/master/TONE_HEX/tone_test.hex)  
+tone_test.hexをダウンロードして、わかりやすい場所に置いておきます。  
 
 ファームウエアの書き込みについては、QMK Toolboxを利用します。
 [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases)  のダウンロード画面で、自分の使っているOSにあわせてダウンロードするファイルを選んでください。  
