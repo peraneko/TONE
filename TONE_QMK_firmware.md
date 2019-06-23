@@ -190,9 +190,8 @@ qmk_firmwareの第一階層で`./util/new_keymap.sh` を使うと、下記の様
 make tone:<あなたのkeymap名>  
 
 #### 注意　
-ロータリーエンコーダを時計回り方向に回した場合に入力したいキーコードは
-if（clockwise）内のtap_code()に書き込みます。
-逆時計周りに方向については、else句の下の行のtap_code()に書き込みます。
+ロータリーエンコーダを時計回り方向に回した場合に入力したいキーコードは、if（clockwise）内のtap_code()に書き込みます。
+ロータリーエンコーダを反時計回りに回した場合に入力したいキーコードは、else句の下の行のtap_code()に書き込みます。
 ~~~C
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( 
