@@ -36,8 +36,7 @@ TONE_test.hexのキーマップは下記の通りです。
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( 
         KC_A,       KC_B,      KC_C,     KC_D,\
-        KC_E,       KC_F,      KC_G,     KC_H,\
-        _______,    _______ // Set with encoder_update_user () 
+        KC_E,       KC_F,      KC_G,     KC_H
     )
 };
 
@@ -77,8 +76,7 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( 
         C(S(KC_E)), S(KC_TAB),  KC_TAB,      KC_0,
-        KC_LSFT,    C(KC_LEFT), C(KC_RIGHT), C(KC_Z),
-        _______,    _______ // Set with encoder_update_user () 
+        KC_LSFT,    C(KC_LEFT), C(KC_RIGHT), C(KC_Z)
     )
 };
 
@@ -199,8 +197,7 @@ if（clockwise）内のtap_code()に書き込みます。
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( 
         C(S(KC_E)), S(KC_TAB),  KC_TAB,      KC_0,
-        KC_LSFT,    C(KC_LEFT), C(KC_RIGHT), C(KC_Z),
-        _______,    _______ // Set with encoder_update_user () 
+        KC_LSFT,    C(KC_LEFT), C(KC_RIGHT), C(KC_Z)
     )
 };
 
