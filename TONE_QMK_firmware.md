@@ -90,8 +90,8 @@ void encoder_update_user(uint16_t index, bool clockwise) {
 }
 
 ~~~
-[TONE_ALR.hex](https://github.com/peraneko/TONE/blob/master/TONE_HEX/TONE_ALR.hex)  
-TONE_ALR.hexをダウンロードして、わかりやすい場所に置き、先程の手順でProMicroに書き込んでみましょう。
+[tone_ALR.hex](https://github.com/peraneko/TONE/blob/master/TONE_HEX/tone_ALR.hex)  
+tone_ALR.hexをダウンロードして、わかりやすい場所に置き、先程の手順でProMicroに書き込んでみましょう。
 
 上段の４キーが左からCtrl+SHIFT+E（書き出し）　SHIFT+TAB　TAB　0    
 下段の４キーが左からSHIFT　CTRL+←（前の画像）　CTRL＋→（次の画像） CTRL+Z（UNDO)  
