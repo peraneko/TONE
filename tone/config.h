@@ -49,7 +49,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define DIODE_DIRECTION COL2ROW
 
 /* Rotary encoder define*/
-#define NUMBER_OF_ENCODERS 1
 #define ENCODERS_PAD_A { B5 }
 #define ENCODERS_PAD_B { B4 }
 
