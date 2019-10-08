@@ -35,7 +35,7 @@ TONE_test.hexのキーマップは下記の通りです。
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT( 
-        KC_A,       KC_B,      KC_C,     KC_D,\
+        KC_A,       KC_B,      KC_C,     KC_D,
         KC_E,       KC_F,      KC_G,     KC_H
     )
 };
@@ -43,9 +43,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Rotary encoder settings */
 void encoder_update_user(uint16_t index, bool clockwise) {
    if (clockwise) {
-        tap_code(KC_0);    //Rotary encoder clockcwise
+        tap_code(KC_0);    //Rotary encoder clockwise
     } else {
-        tap_code(KC_1);  //Rotary encoder Reverse clockcwise
+        tap_code(KC_1);    //Rotary encoder Reverse clockwise
     }
 }
 
@@ -83,9 +83,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Rotary encoder settings */
 void encoder_update_user(uint16_t index, bool clockwise) {
    if (clockwise) {
-        tap_code(KC_UP);    //Rotary encoder clockcwise
+        tap_code(KC_UP);    //Rotary encoder clockwise
     } else {
-        tap_code(KC_DOWN);  //Rotary encoder Reverse clockcwise
+        tap_code(KC_DOWN);  //Rotary encoder Reverse clockwise
     }
 }
 
@@ -203,9 +203,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 /* Rotary encoder settings */
 void encoder_update_user(uint16_t index, bool clockwise) {
    if (clockwise) {
-        tap_code(KC_UP);    //Rotary encoder clockcwise
+        tap_code(KC_UP);    //Rotary encoder clockwise
     } else {
-        tap_code(KC_DOWN);  //Rotary encoder Reverse clockcwise
+        tap_code(KC_DOWN);  //Rotary encoder Reverse clockwise
     }
 }
 ~~~
